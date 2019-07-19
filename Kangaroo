@@ -1,0 +1,17 @@
+//Function to Kangaroo
+string kangaroo(int x1, int v1, int x2, int v2) 
+{
+int s1=x1,s2=x2;
+while(s1+v1<=s2+v2)     //If one surpassed, it can never meet
+{
+    s1 = s1+v1;
+    s2 = s2+v2;
+    if(s1==s2)
+    {
+        return "YES";
+        break;
+    }
+
+}
+return "NO";
+}
