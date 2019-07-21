@@ -1,0 +1,14 @@
+vector<int> permutationEquation(vector<int> p) 
+{
+    vector<int> aa;
+    int i,j;
+    for(i=1;i<=p.size();i++)
+    {   
+        for(j=1;j<=p.size();j++)
+        {
+        if(i == p[p[j-1]-1])
+            aa.push_back(j);
+        }    
+    }
+return aa;
+}
