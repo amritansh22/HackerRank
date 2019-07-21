@@ -1,0 +1,11 @@
+int chocolateFeast(int n, int c, int m) 
+{
+    int w  = n/c;        //Wrappers left
+    int sum = w;         //to store total choclates eaten
+    while(w>=m)
+    {
+        w = w-m+1;
+        sum = sum+1;
+    }
+return sum;
+}
