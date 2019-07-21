@@ -1,0 +1,24 @@
+int minimumDistances(vector<int> a) 
+{
+int i,j,diff = 0,min = *max_element(a.begin(), a.end());;
+    for(i = 0; i<a.size()-1;i++)
+    {
+        for(j=i+1;j<a.size();j++)
+        {
+            if(a[i] == a[j])
+                {
+                diff = abs(i-j);
+                
+                if(diff<min)
+                    {
+                      min = diff; 
+                    }
+                }
+        }
+        
+    }
+if(diff ==0)
+    return -1;
+else    
+    return min;
+}
